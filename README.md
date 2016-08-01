@@ -5,10 +5,9 @@ It is a powerful and high efficiently golang IDE with these configuration.You ca
 Make sure you have go installed and specified GOPATH.Then follow the steps below:
 
 1.  git clone https://github.com/imroc/vim-go-ide.git
-
-2.  copy `.vimrc` and `.vim/` to your home directory
-
-3.  copy `bin/` to your `$GOPATH/`
+2.  copy `.vimrc` to your home directory
+3.  run `:PluginInstall` in your vim to download vim plugins
+3.  run `:GoInstallBinaries` to install go tools used by vim-go,or just copy `bin/` to your `$GOPATH/` if you are in some country that blocked google's websites
 
 Aha,that's all,pretty simple,isn't it?
 
