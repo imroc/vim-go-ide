@@ -34,13 +34,6 @@ Plugin 'honza/vim-snippets'
 " 一行代码分成多行显示或多行变一行
 Plugin 'AndrewRadev/splitjoin.vim'
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
 
 
 call vundle#end()            " required
@@ -60,6 +53,13 @@ filetype plugin indent on    " required
 " 粘贴取消自动缩进
 set pastetoggle=<F3>
 
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
@@ -72,7 +72,9 @@ let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme molokai
 
+" map the <Leader> key as ",",the default is "\"
 let mapleader = ","
+" map kj as ESC while in the insert mode
 imap kj <esc>
 
 set autowrite
