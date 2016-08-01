@@ -1,7 +1,7 @@
 # vim-go-ide
 It is a powerful and high efficiently golang IDE with these configuration.You can start to use in miniutes.
 
-## Quick install
+# Quick install
 Make sure you have go and vim installed, and also specified GOPATH.Then follow the steps below:
 
 1.  git clone https://github.com/imroc/vim-go-ide.git
