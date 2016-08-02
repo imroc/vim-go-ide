@@ -34,6 +34,8 @@ Plugin 'honza/vim-snippets'
 " 一行代码分成多行显示或多行变一行
 Plugin 'AndrewRadev/splitjoin.vim'
 
+" search
+Plugin 'ctrlpvim/ctrlp.vim'
 
 
 call vundle#end()            " required
@@ -95,11 +97,17 @@ endfunction
 
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
 " auto import and format go code when saving
 let g:go_fmt_command = "goimports"
 " let the json name to be camelcase,the default is snake_case
 let g:go_snippet_case_type = "camelcase"
+" go test's timeout
+let g:go_test_timeout = '10s'
 
 " beautify vim-go
 let g:go_highlight_types = 1
@@ -111,3 +119,16 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
+
+" do not pop up location lists
+let g:go_list_type = "quickfix"
+" auto display type info
+" let g:go_auto_type_info = 1
+" set updatetime=100
+
+" highlight same variable,function or struct.
+let g:go_auto_sameids = 1
