@@ -15,8 +15,8 @@ Aha,that's all,pretty simple,isn't it?
 If you want to update go tools used by vim-go,like godef,gocode,goimports etc,you could run `:GoUpdateBinaries` in vim.
 
 # How to use
-I'll tell you how to use this powerful golang IDE,coming soon...
 Note:We mapped key <leader> as "," and <esc> as "kj".All of the shortcut is in normal mode.
+
 1.  Run current go package:`<leader>r` or `:GoRun`.
 2.  Build current go package:`<leader>b` or `:GoBuild`.
 3.  Test current go package:`<leader>t` or `:GoTest`.
