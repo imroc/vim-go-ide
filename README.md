@@ -67,3 +67,4 @@ type foo struct {
 13. `]]` jumping to next function,`[[` jumping to previous function,if you add number before them,for example,`3]]` jumping to third function based on current location.Similarly,`d]]` delete anything before next function,`v]]` select anything till the end of next function.
 14. `:A` or `:Alternate` open test or source code coresponding to current go file in current window.`:AV` open it by splite window vertically,`:AS` is horizontally,`:AT` is open it in a new tab. 
 15. `K` or `:GoDoc` to see documentation.
+16. 
